@@ -1,0 +1,295 @@
+20:29:57 **** Build of configuration Debug for project STM32F103C6 ****
+make -j12 all 
+arm-none-eabi-gcc -mcpu=cortex-m3 -g3 -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f103c6tx.d" -MT"Startup/startup_stm32f103c6tx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Startup/startup_stm32f103c6tx.o" "../Startup/startup_stm32f103c6tx.s"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sysmem.o"
+../Src/main.c:34:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main(){
+      ^~~~
+../Src/main.c: In function 'main':
+../Src/main.c:29:38: error: 'vu' undeclared (first use in this function)
+ #define GPIOA_ODR                 *((vu cint32_t *)(GPIOA_BASE + 0x0C ))
+                                      ^
+../Src/main.c:40:3: note: in expansion of macro 'GPIOA_ODR'
+   GPIOA_ODR |= GPIOA13;
+   ^~~~~~~~~
+../Src/main.c:29:38: note: each undeclared identifier is reported only once for each function it appears in
+ #define GPIOA_ODR                 *((vu cint32_t *)(GPIOA_BASE + 0x0C ))
+                                      ^
+../Src/main.c:40:3: note: in expansion of macro 'GPIOA_ODR'
+   GPIOA_ODR |= GPIOA13;
+   ^~~~~~~~~
+../Src/main.c:29:41: error: expected ')' before 'cint32_t'
+ #define GPIOA_ODR                 *((vu cint32_t *)(GPIOA_BASE + 0x0C ))
+                                         ^
+../Src/main.c:40:3: note: in expansion of macro 'GPIOA_ODR'
+   GPIOA_ODR |= GPIOA13;
+   ^~~~~~~~~
+../Src/main.c:29:41: error: expected ')' before 'cint32_t'
+ #define GPIOA_ODR                 *((vu cint32_t *)(GPIOA_BASE + 0x0C ))
+                                         ^
+../Src/main.c:42:3: note: in expansion of macro 'GPIOA_ODR'
+   GPIOA_ODR & = ~GPIOA13;
+   ^~~~~~~~~
+../Src/main.c:42:15: error: expected expression before '=' token
+   GPIOA_ODR & = ~GPIOA13;
+               ^
+make: *** [Src/subdir.mk:24: Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+20:30:09 **** Incremental Build of configuration Debug for project STM32F103C6 ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c:34:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main(){
+      ^~~~
+../Src/main.c: In function 'main':
+../Src/main.c:29:38: error: 'vu' undeclared (first use in this function)
+ #define GPIOA_ODR                 *((vu cint32_t *)(GPIOA_BASE + 0x0C ))
+                                      ^
+../Src/main.c:40:3: note: in expansion of macro 'GPIOA_ODR'
+   GPIOA_ODR |= GPIOA13;
+   ^~~~~~~~~
+../Src/main.c:29:38: note: each undeclared identifier is reported only once for each function it appears in
+ #define GPIOA_ODR                 *((vu cint32_t *)(GPIOA_BASE + 0x0C ))
+                                      ^
+../Src/main.c:40:3: note: in expansion of macro 'GPIOA_ODR'
+   GPIOA_ODR |= GPIOA13;
+   ^~~~~~~~~
+../Src/main.c:29:41: error: expected ')' before 'cint32_t'
+ #define GPIOA_ODR                 *((vu cint32_t *)(GPIOA_BASE + 0x0C ))
+                                         ^
+../Src/main.c:40:3: note: in expansion of macro 'GPIOA_ODR'
+   GPIOA_ODR |= GPIOA13;
+   ^~~~~~~~~
+../Src/main.c:29:41: error: expected ')' before 'cint32_t'
+ #define GPIOA_ODR                 *((vu cint32_t *)(GPIOA_BASE + 0x0C ))
+                                         ^
+../Src/main.c:42:3: note: in expansion of macro 'GPIOA_ODR'
+   GPIOA_ODR &= ~GPIOA13;
+   ^~~~~~~~~
+make: *** [Src/subdir.mk:24: Src/main.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+20:30:53 **** Incremental Build of configuration Debug for project STM32F103C6 ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c:34:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main(){
+      ^~~~
+arm-none-eabi-gcc -o "STM32F103C6.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\youssef's\Desktop\embedded systems\Embedded_Systems\EmbeddedC\Stm32 cube\STM32F103C6\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="STM32F103C6.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: STM32F103C6.elf
+ 
+arm-none-eabi-size   STM32F103C6.elf 
+arm-none-eabi-objdump -h -S  STM32F103C6.elf  > "STM32F103C6.list"
+arm-none-eabi-objcopy  -O binary  STM32F103C6.elf  "STM32F103C6.bin"
+   text	   data	    bss	    dec	    hex	filename
+    652	      8	   1568	   2228	    8b4	STM32F103C6.elf
+Finished building: default.size.stdout
+ 
+Finished building: STM32F103C6.bin
+Finished building: STM32F103C6.list
+ 
+ 
+20:31:43 **** Incremental Build of configuration Debug for project STM32F103C6 ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "STM32F103C6.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\youssef's\Desktop\embedded systems\Embedded_Systems\EmbeddedC\Stm32 cube\STM32F103C6\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="STM32F103C6.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: STM32F103C6.elf
+ 
+arm-none-eabi-objdump -h -S  STM32F103C6.elf  > "STM32F103C6.list"
+arm-none-eabi-objcopy  -O binary  STM32F103C6.elf  "STM32F103C6.bin"
+arm-none-eabi-size   STM32F103C6.elf 
+   text	   data	    bss	    dec	    hex	filename
+    652	      8	   1568	   2228	    8b4	STM32F103C6.elf
+Finished building: default.size.stdout
+ 
+Finished building: STM32F103C6.list
+Finished building: STM32F103C6.bin
+ 
+ 
+20:43:48 **** Incremental Build of configuration Debug for project STM32F103C6 ****
+make -j12 all 
+arm-none-eabi-size   STM32F103C6.elf 
+arm-none-eabi-objcopy  -O ihex  STM32F103C6.elf  "STM32F103C6.hex"
+   text	   data	    bss	    dec	    hex	filename
+    652	      8	   1568	   2228	    8b4	STM32F103C6.elf
+Finished building: default.size.stdout
+ 
+Finished building: STM32F103C6.hex
+ 
+20:59:30 **** Incremental Build of configuration Debug for project STM32F103C6 ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "STM32F103C6.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\youssef's\Desktop\embedded systems\Embedded_Systems\EmbeddedC\Stm32 cube\STM32F103C6\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="STM32F103C6.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: STM32F103C6.elf
+ 
+arm-none-eabi-objdump -h -S  STM32F103C6.elf  > "STM32F103C6.list"
+arm-none-eabi-objcopy  -O ihex  STM32F103C6.elf  "STM32F103C6.hex"
+arm-none-eabi-objcopy  -O binary  STM32F103C6.elf  "STM32F103C6.bin"
+arm-none-eabi-size   STM32F103C6.elf 
+   text	   data	    bss	    dec	    hex	filename
+    652	      8	   1568	   2228	    8b4	STM32F103C6.elf
+Finished building: default.size.stdout
+ 
+Finished building: STM32F103C6.hex
+Finished building: STM32F103C6.list
+Finished building: STM32F103C6.bin
+ 
+ 
+ 
+21:02:50 **** Incremental Build of configuration Debug for project STM32F103C6 ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "STM32F103C6.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\youssef's\Desktop\embedded systems\Embedded_Systems\EmbeddedC\Stm32 cube\STM32F103C6\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="STM32F103C6.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+c:\st\stm32cubeide_1.4.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.4.0.202007081208\tools\arm-none-eabi\bin\ld.exe: cannot open output file STM32F103C6.elf: Invalid argument
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:52: STM32F103C6.elf] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+21:03:24 **** Incremental Build of configuration Debug for project STM32F103C6 ****
+make -j12 all 
+arm-none-eabi-gcc -o "STM32F103C6.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\youssef's\Desktop\embedded systems\Embedded_Systems\EmbeddedC\Stm32 cube\STM32F103C6\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="STM32F103C6.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+c:\st\stm32cubeide_1.4.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.4.0.202007081208\tools\arm-none-eabi\bin\ld.exe: cannot open output file STM32F103C6.elf: Invalid argument
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:52: STM32F103C6.elf] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+21:04:08 **** Incremental Build of configuration Debug for project STM32F103C6 ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "STM32F103C6.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\youssef's\Desktop\embedded systems\Embedded_Systems\EmbeddedC\Stm32 cube\STM32F103C6\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="STM32F103C6.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: STM32F103C6.elf
+ 
+arm-none-eabi-objdump -h -S  STM32F103C6.elf  > "STM32F103C6.list"
+arm-none-eabi-objcopy  -O ihex  STM32F103C6.elf  "STM32F103C6.hex"
+arm-none-eabi-objcopy  -O binary  STM32F103C6.elf  "STM32F103C6.bin"
+arm-none-eabi-size   STM32F103C6.elf 
+   text	   data	    bss	    dec	    hex	filename
+    652	      8	   1568	   2228	    8b4	STM32F103C6.elf
+Finished building: default.size.stdout
+ 
+Finished building: STM32F103C6.hex
+Finished building: STM32F103C6.list
+Finished building: STM32F103C6.bin
+ 
+ 
+ 
+21:10:26 **** Incremental Build of configuration Debug for project STM32F103C6 ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "STM32F103C6.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\youssef's\Desktop\embedded systems\Embedded_Systems\EmbeddedC\Stm32 cube\STM32F103C6\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="STM32F103C6.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: STM32F103C6.elf
+ 
+arm-none-eabi-objdump -h -S  STM32F103C6.elf  > "STM32F103C6.list"
+arm-none-eabi-objcopy  -O ihex  STM32F103C6.elf  "STM32F103C6.hex"
+arm-none-eabi-objcopy  -O binary  STM32F103C6.elf  "STM32F103C6.bin"
+arm-none-eabi-size   STM32F103C6.elf 
+   text	   data	    bss	    dec	    hex	filename
+    652	      8	   1568	   2228	    8b4	STM32F103C6.elf
+Finished building: default.size.stdout
+ 
+Finished building: STM32F103C6.list
+Finished building: STM32F103C6.bin
+Finished building: STM32F103C6.hex
+ 
+ 
+ 
+21:12:08 **** Incremental Build of configuration Debug for project STM32F103C6 ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "STM32F103C6.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\youssef's\Desktop\embedded systems\Embedded_Systems\EmbeddedC\Stm32 cube\STM32F103C6\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="STM32F103C6.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: STM32F103C6.elf
+ 
+arm-none-eabi-objdump -h -S  STM32F103C6.elf  > "STM32F103C6.list"
+arm-none-eabi-objcopy  -O ihex  STM32F103C6.elf  "STM32F103C6.hex"
+arm-none-eabi-objcopy  -O binary  STM32F103C6.elf  "STM32F103C6.bin"
+arm-none-eabi-size   STM32F103C6.elf 
+   text	   data	    bss	    dec	    hex	filename
+    652	      8	   1568	   2228	    8b4	STM32F103C6.elf
+Finished building: default.size.stdout
+ 
+Finished building: STM32F103C6.hex
+Finished building: STM32F103C6.list
+Finished building: STM32F103C6.bin
+ 
+ 
+ 
+21:12:58 **** Incremental Build of configuration Debug for project STM32F103C6 ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "STM32F103C6.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\youssef's\Desktop\embedded systems\Embedded_Systems\EmbeddedC\Stm32 cube\STM32F103C6\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="STM32F103C6.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: STM32F103C6.elf
+ 
+arm-none-eabi-objdump -h -S  STM32F103C6.elf  > "STM32F103C6.list"
+arm-none-eabi-objcopy  -O ihex  STM32F103C6.elf  "STM32F103C6.hex"
+arm-none-eabi-objcopy  -O binary  STM32F103C6.elf  "STM32F103C6.bin"
+arm-none-eabi-size   STM32F103C6.elf 
+   text	   data	    bss	    dec	    hex	filename
+    652	      8	   1568	   2228	    8b4	STM32F103C6.elf
+Finished building: default.size.stdout
+ 
+Finished building: STM32F103C6.list
+Finished building: STM32F103C6.hex
+Finished building: STM32F103C6.bin
+ 
+ 
+ 
+21:14:00 **** Incremental Build of configuration Debug for project STM32F103C6 ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "STM32F103C6.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\youssef's\Desktop\embedded systems\Embedded_Systems\EmbeddedC\Stm32 cube\STM32F103C6\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="STM32F103C6.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: STM32F103C6.elf
+ 
+arm-none-eabi-objdump -h -S  STM32F103C6.elf  > "STM32F103C6.list"
+arm-none-eabi-objcopy  -O ihex  STM32F103C6.elf  "STM32F103C6.hex"
+arm-none-eabi-objcopy  -O binary  STM32F103C6.elf  "STM32F103C6.bin"
+arm-none-eabi-size   STM32F103C6.elf 
+   text	   data	    bss	    dec	    hex	filename
+    652	      8	   1568	   2228	    8b4	STM32F103C6.elf
+Finished building: default.size.stdout
+ 
+Finished building: STM32F103C6.list
+Finished building: STM32F103C6.hex
+Finished building: STM32F103C6.bin
+ 
+ 
+ 
+21:16:41 **** Incremental Build of configuration Debug for project STM32F103C6 ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "STM32F103C6.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\youssef's\Desktop\embedded systems\Embedded_Systems\EmbeddedC\Stm32 cube\STM32F103C6\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="STM32F103C6.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: STM32F103C6.elf
+ 
+arm-none-eabi-objdump -h -S  STM32F103C6.elf  > "STM32F103C6.list"
+arm-none-eabi-objcopy  -O ihex  STM32F103C6.elf  "STM32F103C6.hex"
+arm-none-eabi-objcopy  -O binary  STM32F103C6.elf  "STM32F103C6.bin"
+arm-none-eabi-size   STM32F103C6.elf 
+   text	   data	    bss	    dec	    hex	filename
+    652	      8	   1568	   2228	    8b4	STM32F103C6.elf
+Finished building: default.size.stdout
+ 
+Finished building: STM32F103C6.list
+Finished building: STM32F103C6.hex
+Finished building: STM32F103C6.bin
+ 
+ 
+ 
+21:19:17 **** Incremental Build of configuration Debug for project STM32F103C6 ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "STM32F103C6.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\youssef's\Desktop\embedded systems\Embedded_Systems\EmbeddedC\Stm32 cube\STM32F103C6\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="STM32F103C6.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: STM32F103C6.elf
+ 
+arm-none-eabi-objdump -h -S  STM32F103C6.elf  > "STM32F103C6.list"
+arm-none-eabi-objcopy  -O ihex  STM32F103C6.elf  "STM32F103C6.hex"
+arm-none-eabi-objcopy  -O binary  STM32F103C6.elf  "STM32F103C6.bin"
+arm-none-eabi-size   STM32F103C6.elf 
+   text	   data	    bss	    dec	    hex	filename
+    652	      8	   1568	   2228	    8b4	STM32F103C6.elf
+Finished building: default.size.stdout
+ 
+Finished building: STM32F103C6.hex
+Finished building: STM32F103C6.bin
+Finished building: STM32F103C6.list
+ 
+ 
+ 
